@@ -1,0 +1,104 @@
+<!-- 
+
+<ion-header no-border>
+  <ion-title style="padding-top: 30px">{{lp.translate()[0].j4}}</ion-title>
+</ion-header>
+
+<ion-content text-center padding>
+  <ion-title>{{lp.translate()[0].j5}}</ion-title>
+
+  <rating
+    [(ngModel)]="rate"
+    readonly="false"
+    size="default"
+    (ngModelChange)="onRateChange($event)"
+  >
+  </rating>
+
+  <div class="reviewspace">
+    <ion-title>{{lp.translate()[0].j6}}</ion-title>
+    <form (ngSubmit)="logForm()">
+      <ion-textarea
+        #myInput
+        id="myInput"
+        rows="1"
+        maxLength="500"
+        [(ngModel)]="todo.description"
+        name="description"
+      >
+      </ion-textarea>
+
+      <ion-button class="button" padding type="submit" epand="block"
+        >{{lp.translate()[0].j7}}</ion-button
+      >
+    </form>
+  </div>
+</ion-content> -->
+
+<ion-content class="backgroundColor">
+  <div class="driverFound">
+    <div class="ion-padding" class="request-for-ride2">
+      <div class="headSection">
+        <div class="moveHeader">
+          <span style="font-size: 25px; font-weight: 800">
+            <strong>Rate Rider</strong></span
+          >
+        </div>
+      </div>
+
+      <div class="resultContainer">
+        <rating
+          [(ngModel)]="rate"
+          readonly="false"
+          size="default"
+          (ngModelChange)="onRateChange($event)"
+        >
+        </rating>
+
+        <div style="display: inline">
+          <div class="content-wrap">
+            <div class="reviewspace">
+              <span
+                style="
+                  font-size: 15px;
+                  font-weight: 200;
+                  text-align: center;
+                  margin-left: 20%;
+                "
+              >
+                Write a review</span
+              >
+              <form (ngSubmit)="logForm()">
+                <ion-textarea
+                  #myInput
+                  id="myInput"
+                  rows="1"
+                  maxLength="500"
+                  [(ngModel)]="todo.description"
+                  name="description"
+                >
+                </ion-textarea>
+
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-button
+                        [ngStyle]="{'margin-top': 20 + 'px', 'font-size': 1.1 + 'em'}"
+                        color="dark"
+                        expand="block"
+                        shape="round"
+                        type="submit"
+                      >
+                        SUBMIT
+                      </ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

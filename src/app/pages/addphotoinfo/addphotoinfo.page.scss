@@ -1,0 +1,40 @@
+.selfie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#my-pic {
+  width: 90% !important;
+  height: 45% !important;
+  border-radius: 12px;
+  border: 1px solid #f7f7f7;
+  vertical-align: center;
+  margin: 5%;
+}
+
+.background {
+ // --background: url(/assets/img/pattern.jpeg);
+
+  //   background-image: url(../../assets/image/pattern.jpeg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+}
+
+#overlay {
+  // position: fixed;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fffdfdd6;
+  z-index: 10;
+  cursor: pointer;
+}

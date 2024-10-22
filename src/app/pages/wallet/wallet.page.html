@@ -1,0 +1,82 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon>
+      <span style="margin-left: 30px; font-size: 1.4em"
+        >Subscription Wallet</span
+      >
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf="ph.funds" style="text-align: center; margin-top: 20%">
+    <h4>
+      You have successfully funded
+      <span style="color: #fbb91d">GHC {{ph.funds}} </span>in your wallet. You
+      have 30 days to use it on Ekodot. Enjoy driving!
+    </h4>
+  </ion-item>
+
+  <div class="centerDiv2" *ngIf="ph.funds">
+    <ion-button (click)="updateFundsO()" slot="end">
+      <ion-icon class="ion-text-center" name="ios-add"></ion-icon> Renew 30- day
+      Subscription
+    </ion-button>
+  </div>
+
+  <!-- <ion-item class="ion-padding" *ngIf="ph.funds" (click)="updateFundsO()">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-padding" col-6>
+          <ion-icon class="ion-text-center" name="ios-add"></ion-icon>
+          Renew 30- day Subscription
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  </ion-item> -->
+
+  <div style="text-align: center; margin-top: 20%" *ngIf="!ph.funds">
+    <h4>Subscribe to drive with Ekodot!</h4>
+
+    <p>
+      Fund your wallet of <span style="color: #fbb91d">GHC 100 </span>and have
+      30 days to use it on Ekodot. Enjoy driving!
+    </p>
+
+    <div class="centerDiv2">
+      <ion-button (click)="subscribe()" slot="end">
+        <ion-icon class="ion-text-center" name="ios-add"></ion-icon> Fund Wallet
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="centerDiv2" *ngIf="funds">
+    <angular4-paystack
+      [key]="'pk_live_3cbc59938d89297220920c120790e6bd28d07d91'"
+      [email]="'nana@ekodot.com'"
+      [amount]="funds"
+      [ref]="random_id"
+      [channels]="channels"
+      [currency]="'GHS'"
+      (close)="paymentCancel()"
+      (callback)="paymentDone($event)"
+      >Pay GHC {{funds}} with Mobile Money/Card</angular4-paystack
+    >
+  </div>
+
+  <!-- <ion-button
+    [disabled]="funds == 0 || ph.funds"
+    color="primary"
+    expand="block"
+    size="large"
+    (click)="AddNow()"
+  >
+    ADD FUNDS
+  </ion-button> -->
+</ion-content>
+
+<ion-footer>
+  <img src="/assets/img/payment.png" />
+</ion-footer>

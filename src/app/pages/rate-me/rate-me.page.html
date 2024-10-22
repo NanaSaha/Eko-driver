@@ -1,0 +1,53 @@
+<ion-content class="ion-padding">
+  <ion-title class="ion-padding" class="ion-text-center">
+    <h1>RATE RIDER</h1>
+  </ion-title>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          class="button"
+          expand="block"
+          (click)="Approve()"
+          size="large"
+        >
+          <ion-icon name="thumbs-up" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button
+          color="danger"
+          class="button"
+          expand="block"
+          (click)="Disapprove()"
+          size="large"
+        >
+          <ion-icon name="thumbs-down" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-title class="ion-text-center" class="ion-padding">
+    <h1>+{{positive_Rate}}% / {{negative_Rate}}%</h1>
+  </ion-title>
+
+  <div *ngIf="hasRated" class="reviewspace" class="ion-padding">
+    <ion-title>Write A Review</ion-title>
+    <form (ngSubmit)="logForm()">
+      <ion-textarea
+        #myInput
+        id="myInput"
+        rows="1"
+        maxLength="500"
+        [(ngModel)]="todo.description"
+        name="description"
+      >
+      </ion-textarea>
+      <ion-button class="button" type="submit" expand="block"
+        >Submit</ion-button
+      >
+    </form>
+  </div>
+</ion-content>

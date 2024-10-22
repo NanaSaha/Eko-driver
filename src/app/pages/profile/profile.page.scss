@@ -1,0 +1,179 @@
+ion-item ion-label {
+  margin: 0 !important;
+}
+
+ion-list {
+  padding: 0;
+  border-radius: 12px;
+}
+
+ion-list-header {
+  background-color: #ececec;
+  margin: 0;
+  padding: 0;
+}
+
+.centerDiv {
+  position: relative;
+  text-align: center;
+}
+
+.centerDiv2 {
+  position: relative;
+  text-align: center;
+  // margin-top: 20%;
+}
+
+.background_whole {
+  z-index: 0 !important;
+  // --background: linear-gradient(360deg, #fff 50%, #fbb91d 50%) !important;
+}
+
+.bookPrice {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.bookTitle {
+  text-align: center;
+}
+
+.content-wrap,
+.img-wrapper {
+  display: inline-block;
+
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.content-wrap2 {
+  display: inline-block;
+  margin-left: 0px;
+  width: 70px;
+  height: 70px;
+}
+
+.avtr {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  display: inline-flex !important;
+}
+
+.cont {
+  // ion-item {
+  //   border-radius: 12px;
+  //   box-shadow: 0px 1px 0px 0.5px rgba(3, 3, 3, 0.253);
+  //   height: 50px;
+  //   margin-top: 3%;
+  //   color: rgb(3, 3, 3);
+  //   animation-direction: alternate;
+  //   animation-name: wiki;
+  //   animation-duration: 0.3s;
+  //   animation-iteration-count: 1;
+  // }
+}
+
+.profile-pic {
+  // width: 6em !important;
+  // height: 6em !important;
+}
+
+// ion-item {
+//   padding: 0 !important;
+//   border: 1px solid rgb(216, 216, 216);
+// }
+
+ion-datetime {
+  padding-left: 3px !important;
+}
+
+.item-inner {
+  border: none !important;
+  padding: 0;
+}
+
+.popover-content {
+  min-height: 0 !important;
+  max-height: 88px !important;
+}
+
+.profile-popover {
+  margin-top: -1px !important;
+}
+
+.placeholder-profile {
+  color: #cccccc;
+}
+
+.dob-label {
+  color: #000000 !important;
+  padding: 10px !important;
+  max-width: 50% !important;
+}
+
+.bar_ridetype {
+  height: auto;
+  width: 91%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  margin-left: 0%;
+  padding: 0px;
+  top: 40%;
+  z-index: 1;
+  border: 1px solid rgb(9, 10, 10);
+  animation-direction: alternate;
+  animation-name: wiki;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+
+  .btn_cancel {
+    ion-icon {
+      font-size: 2em;
+      top: 10px;
+    }
+  }
+
+  ion-button {
+    border: 1.3px solid rgb(0, 0, 0);
+    height: auto;
+    width: auto;
+    text-align: center;
+
+    border-radius: 12px;
+  }
+
+  .gutton {
+    bottom: -7.5px;
+    border-radius: 12px;
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  .text {
+    padding-bottom: 0px;
+    font-size: 1.4em;
+
+    ion-spinner {
+      top: 10px;
+    }
+  }
+}
+.top_bar {
+  height: 200px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: none;
+  padding: 0px;
+  background: rgb(0, 0, 0);
+  color: #fdfdfd;
+  font-weight: bold;
+  font-style: bold;
+  font-size: 1.3em;
+  border-top: 0px;
+
+  ion-icon {
+    color: white;
+  }
+}

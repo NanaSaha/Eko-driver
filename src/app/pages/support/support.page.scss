@@ -1,0 +1,91 @@
+ion-content {
+  ion-select {
+    width: 140px;
+  }
+
+  h1 {
+    background: #f7f7f7;
+    font-size: 1.67em;
+    padding-top: 7px;
+    width: auto;
+    padding-bottom: 7px;
+  }
+
+  .followed-items {
+    .driver {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 30px;
+      // border: 1px solid rgba(212, 212, 212, 0.93);
+      // background-color: #3880ff;
+      padding: 10px;
+      float: left;
+      width: 80%;
+
+      p {
+        font-size: 16px;
+        font-size: 4vw;
+        color: white;
+      }
+    }
+
+    .user {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 30px;
+      border: 0px solid rgba(212, 212, 212, 0.93);
+      // background-color: #3880ff;
+      padding: 10px;
+      float: right;
+      width: 70%;
+
+      p {
+        font-size: 16px;
+        font-size: 4vw;
+        color: white;
+      }
+    }
+  }
+
+  .topped-items {
+    ion-item {
+      margin-top: 0px;
+      margin-bottom: 6px;
+    }
+    h2 {
+      color: orange;
+      font-size: 1.27em;
+      padding: 2px;
+    }
+
+    ion-label {
+      color: rgb(0, 0, 0) !important;
+      font-size: 1em;
+      padding: 2px;
+    }
+  }
+}
+
+ion-footer {
+  background-color: transparent;
+  background: transparent;
+
+  ion-button {
+    height: 65px;
+    // width: 140px;
+  }
+
+  h2 {
+    font-size: 1em;
+    height: auto;
+  }
+
+  ion-icon {
+    margin: 5px;
+  }
+
+  .profile-pic {
+    width: 15%;
+    height: 18%;
+  }
+}

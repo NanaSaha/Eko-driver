@@ -1,0 +1,101 @@
+<ion-content class="background_whole" padding>
+  <ion-header no-border>
+    <ion-toolbar>
+      <ion-button size="large" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+        <ion-title>PROFILE</ion-title>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid style="background-color: beige; border-radius: 12px">
+    <ion-row>
+      <ion-col size="8">
+        <div class="content-wrap" *ngIf="first_name">
+          <span class="bookPrice">{{first_name}} {{last_name}}</span>
+          <br />
+          <span class="bookTitle" style="color: red">{{unique}}</span>
+        </div>
+
+        <div class="content-wrap" *ngIf="!first_name">
+          <span class="bookPrice">EKODOT DRIVER</span>
+        </div>
+      </ion-col>
+
+      <ion-col size="4">
+        <div class="content-wrap2" *ngIf="ph.picture">
+          <ion-avatar class="avtr">
+            <img class="profile-pic" [src]="ph.picture" />
+          </ion-avatar>
+        </div>
+
+        <div class="content-wrap2" *ngIf="!ph.picture">
+          <ion-avatar class="avtr">
+            <img class="profile-pic" src="assets/img/user-edit-solid.svg" />
+          </ion-avatar>
+        </div>
+        <!-- <div class="centerDiv" *ngIf="ph.picture" (click)="choosePic()">
+          <ion-avatar
+            style="text-align: center; display: inline-flex !important"
+          >
+            <img class="profile-pic" [src]="ph.picture" />
+          </ion-avatar>
+        </div> -->
+        <!-- <div class="centerDiv" *ngIf="!ph.picture" (click)="choosePic()">
+          <ion-avatar
+            style="text-align: center; display: inline-flex !important"
+          >
+            <img class="profile-pic" src="assets/img/user-edit-solid.svg" />
+          </ion-avatar>
+        </div> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item (click)="updateEmail()">
+    <ion-icon name="ios-mail" style="padding-right: 20px"></ion-icon>
+    <h4 style="text-align: center" *ngIf="!email">Update Your Email</h4>
+    <h4 style="text-align: center" *ngIf="email">{{email}}</h4>
+
+    <!-- <ion-icon name="arrow-dropright" slot="end"></ion-icon> -->
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-icon name="ios-contact" style="padding-right: 20px"></ion-icon>
+    <h4 style="text-align: center" *ngIf="!first_name">Ekodot Driver</h4>
+    <h4 style="text-align: center" *ngIf="first_name">
+      {{first_name}} {{last_name}}
+    </h4>
+    <ion-icon name="arrow-dropright" slot="end"></ion-icon>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-icon name="ios-call" style="padding-right: 20px"></ion-icon>
+    <h4 style="text-align: center" *ngIf="phoneNumber">{{phoneNumber}}</h4>
+    <h4 style="text-align: center" *ngIf="!phoneNumber">027XXXXXXX</h4>
+    <!-- <ion-icon name="arrow-dropright" slot="end"></ion-icon> -->
+  </ion-item>
+
+  <ion-item (click)="updateEmergencyNumber()" *ngIf="emergencyNumber">
+    <ion-icon name="ios-call" style="padding-right: 10px"></ion-icon>
+    <h4 style="text-align: center" *ngIf="emergencyNumber">
+      Emergency: <span style="color: red"> {{emergencyNumber}}</span>
+    </h4>
+
+    <!-- <ion-icon name="arrow-dropright" slot="end"></ion-icon> -->
+  </ion-item>
+
+  <div *ngIf="!emergencyNumber" class="centerDiv">
+    <h4 style="text-align: center" *ngIf="!emergencyNumber">
+      <ion-button (click)="updateEmergencyNumber()" color="danger">
+        Add Emergency Number<ion-icon name="add" slot="end"></ion-icon
+      ></ion-button>
+    </h4>
+  </div>
+
+  <div class="centerDiv2">
+    <ion-button (click)="logOut()">
+      Sign Out <ion-icon name="power" slot="end"></ion-icon
+    ></ion-button>
+  </div>
+</ion-content>

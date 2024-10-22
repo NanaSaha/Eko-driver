@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"> {{lp.translate()[0].l3}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div [ngStyle]="{'margin-top': 30 + '%'}">
+    <h3 class="ion-text-center">
+      Congratulations!! &#127881;
+     
+    </h3>
+
+     <p>You have completed your registration</p>
+      <p>We will notify you on approval after verification within the next 24 hours</p>
+      <p>Be advised to come to our near by office with your car or meet one of our agents at your location for introduction</p>
+      <p>Thank you! </p>
+  </div>
+
+  <ion-button
+    class="button"
+    size="large"
+    [ngStyle]="{'margin-top': 30 + '%'}"
+    color="primary"
+    expand="block"
+    (click)="close()"
+  >
+    Accept
+  </ion-button>
+
+  <p class="centerTextfoot">
+    <img src="/assets/img/happy2.png" />
+  </p>
+</ion-content>
+
+<!-- <ion-footer>
+  <img src="/assets/img/happy2.png" />
+</ion-footer> -->

@@ -1,0 +1,116 @@
+ion-label {
+  font-size: 40px;
+}
+
+h4,
+h1,
+ion-icon {
+  color: rgb(0, 0, 0);
+}
+
+ion-item {
+  // padding-top: 15px;
+  padding-top: 0 px;
+}
+
+#iconSize {
+  font-size: 60px !important;
+}
+
+.resultContainer {
+  width: 100%;
+  position: relative;
+  left: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.bookImage,
+.bookTitle,
+.bookPrice {
+  margin-left: 20px;
+}
+
+#editPro {
+  color: rgba(251, 185, 29, 1);
+  font-size: 14px;
+}
+
+.content-wrap,
+.img-wrapper {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.sc-ion-label-md-s h1 {
+  font-size: 16px !important;
+}
+
+#drivericonSize {
+  font-size: 70px !important;
+}
+
+.button-native {
+  box-shadow: none !important;
+}
+
+#drivericonSize {
+  font-size: 70px !important;
+}
+
+#editPro {
+  color: rgba(251, 185, 29, 1);
+}
+
+.item-interactive.ion-valid {
+  --highlight-background: #ffffff !important;
+}
+
+ @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Montserrat-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../assets/fonts/Montserrat-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Montserratt";
+    font-style: italic;
+    font-weight: bold;
+    src: url("../assets/fonts/Montserrat-Light.ttf");
+  }
+
+
+
+    .driver {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 30px;
+      border: 1px solid rgba(212, 212, 212, 0.93);
+      background-color: #fbb91d;
+      padding: 10px;
+      float: right;
+      width: 80%;
+      color: rgb(0, 0, 0);
+    }
+
+    .user {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 30px;
+      border: 1px solid rgba(212, 212, 212, 0.93);
+      background-color: #101110;
+      padding: 10px;
+      float: left;
+      width: 80%;
+      color: #fbb91d;
+    }
+

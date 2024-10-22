@@ -1,0 +1,79 @@
+ion-content {
+  // --background: url("src/assets/img/logo-bg.png") no-repeat center / cover;
+  @keyframes wiki {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  form {
+    margin-bottom: 16px;
+    height: 300px;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 85%;
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 0px 1.5px 0px 0px rgba(3, 3, 3, 0.253);
+    ion-button {
+      margin-top: 50px !important;
+      border-radius: 12px;
+    }
+  }
+  .new-background-color {
+    margin-top: 10px;
+    // background: url("src/assets/img/logo-bg.png") no-repeat center / cover;
+  }
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+  ion-input {
+    padding: 30px;
+  }
+  ion-item {
+    --inner-padding-start: 0px;
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    padding: 2px;
+  }
+  ion-button {
+    background: rgb(10, 100, 235);
+    height: 50px;
+    color: #ffffff;
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    border-radius: 12px;
+  }
+  .terms {
+    margin-top: 40px;
+    color: rgb(10, 100, 235);
+    text-align: center;
+  }
+  .logo-text {
+    color: rgb(10, 100, 235);
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .logo-text1 {
+    color: rgb(10, 100, 235);
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  .o_section {
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+  }
+}

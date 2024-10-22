@@ -1,0 +1,63 @@
+page-trip-info {
+  ion-card-header {
+    text-align: center;
+  }
+
+  .drive {
+    color: blue;
+  }
+
+  .price {
+    color: blue;
+  }
+
+  .date {
+    color: red;
+  }
+
+  .destination {
+    color: green;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    color: blue;
+    text-align: center;
+  }
+
+  ion-item {
+    // border-radius: 12px;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(212, 212, 212, 0.93) !important;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.2em;
+    //width: 100% !important;
+    color: blue;
+  }
+
+  p {
+    font-size: 1.3em;
+    height: auto;
+    color: rgb(0, 0, 0);
+  }
+
+  h3 {
+    font-size: 1em;
+
+    color: rgb(90, 90, 90);
+  }
+
+  // .hists {
+  //   border: 1px solid rgba(212, 212, 212, 0.93) !important;
+
+  //   font-size: 1.1em;
+  //   width: 100%;
+  //   border-radius: 12px;
+  //   //padding: 6px;
+  //   background: #f7f7f7;
+  //   color: rgb(0, 0, 0);
+  // }
+}

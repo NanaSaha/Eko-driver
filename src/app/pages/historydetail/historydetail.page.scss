@@ -1,0 +1,127 @@
+ion-content {
+  .drive {
+    color: black;
+    ion-label {
+      font-size: 0.8em;
+      padding: 12px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .price {
+    color: #3eab0f;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    border-radius: 12px;
+    ion-label {
+      font-size: 0.8em;
+      padding: 5px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .date {
+    color: #fbb91d;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.93);
+
+    ion-label {
+      font-size: 0.8em;
+      padding: 5px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .location {
+    width: auto;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    p {
+      height: auto;
+    }
+
+    ion-label {
+      font-size: 0.8em;
+      padding: 5px;
+      color: #fbb91d;
+    }
+  }
+
+  .destination {
+    width: auto;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    ion-label {
+      font-size: 0.8em;
+      padding: 5px;
+      color: darkslateblue;
+    }
+  }
+
+  p {
+    font-size: 1.3em;
+    height: auto;
+    line-height: 100px;
+    width: auto;
+  }
+}
+
+#topcontent {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1.27em;
+  color: white;
+  ion-button {
+    border: 1px solid #f7f7f7;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+h1 {
+  background: rgb(36, 140, 210);
+  font-size: 1.67em;
+  padding-top: 7px;
+  width: auto;
+  padding-bottom: 7px;
+}
+
+.followed-items {
+  ion-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 212, 212, 0.93);
+  }
+}
+
+.topped-items {
+  ion-item {
+    margin-top: 0px;
+    margin-bottom: 6px;
+  }
+  h2 {
+    color: #fbb91d;
+    font-size: 1.27em;
+    padding: 2px;
+  }
+
+  ion-label {
+    color: rgb(0, 153, 255) !important;
+    font-size: 1em;
+    padding: 2px;
+  }
+}
+
+ion-button {
+  border-radius: 12px;
+}
+
+ion-footer {
+  border-top: 1.4px solid rgba(212, 212, 212, 0.93);
+}

@@ -1,0 +1,149 @@
+ion-content {
+  .drive {
+    color: black;
+    ion-icon {
+      font-size: 0.8em;
+      padding: 12px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .price {
+    color: #3eab0f;
+    font-size: 1.67em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    border-radius: 12px;
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .date {
+    color: orange;
+    font-size: 1.47em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.93);
+
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .time {
+    color: rgb(44, 136, 241);
+    font-size: 1.17em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: rgb(36, 140, 210);
+    }
+  }
+
+  .location {
+    width: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    p {
+      font-size: 1.3em;
+      height: auto;
+    }
+
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: orange;
+    }
+  }
+
+  .destination {
+    width: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: darkslateblue;
+    }
+  }
+
+  p {
+    font-size: 1.3em;
+    height: auto;
+    line-height: 100px;
+    width: auto;
+  }
+
+  .duedate {
+    color: white;
+    width: auto;
+    background: #3eab0f;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #c5c5c5;
+    border-radius: 12px;
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: darkslateblue;
+    }
+  }
+
+  .onduedate {
+    color: white;
+    width: auto;
+    background: #f53d3d;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #c5c5c5;
+    border-radius: 12px;
+    ion-icon {
+      font-size: 0.8em;
+      padding: 5px;
+      color: darkslateblue;
+    }
+  }
+}
+
+#topcontent {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 1.27em;
+  color: white;
+  button {
+    border: 1px solid #f7f7f7;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+h1 {
+  background: rgb(36, 140, 210);
+  font-size: 1.67em;
+  padding-top: 14px;
+  width: auto;
+  padding-bottom: 14px;
+}
+
+.followed-items {
+  ion-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 212, 212, 0.93);
+  }
+}

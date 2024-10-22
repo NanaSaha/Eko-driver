@@ -1,0 +1,73 @@
+<ion-content scroll="true" overflow-scroll="true">
+  <div class="imgBack">
+    <div id="overlay">
+    
+      <div class="backText">
+        <h3 class="smallText">Welcome to</h3>
+        <h1 class="BigText">EKO<span id="verySmall">Driver</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <div overflow-scroll="true" class="centerLogin">
+    <br />
+  
+    <div id="sign-in-button"></div>
+
+    <ion-grid class="phoneAuthGrid" *ngIf="showPhone">
+      <ion-row>
+        <ion-col size="4">
+          <ion-item class="countryCode">
+            <div><img src="/assets/flags/gha.svg" class="flag" /> +233</div>
+           
+          </ion-item>
+        </ion-col>
+        <ion-col size="8">
+          <ion-input
+            clearInput
+            type="number"
+            placeholder="Your Phone Number"
+            [(ngModel)]="PhoneNo"
+            class="input ion-padding-horizontal"
+            clear-input="true"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            expand="block"
+            (click)="signinWithPhoneNumber($event)"
+            class="btn-transition"
+          >
+            Sign In With Phone Number</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div *ngIf="showOtpComponent" class="alignCen">
+      <h2 style="text-align: center">Enter Your OTP Code Here To Login</h2>
+      <ng-otp-input
+        #ngOtpInput
+        (onInputChange)="onOtpChange($event)"
+        [config]="config"
+        style="text-align: center"
+      ></ng-otp-input>
+      <br />
+      <ion-button class="btn-transition" style="text-align: center">
+        Resend Code
+      </ion-button>
+    </div>
+    
+  </div>
+
+
+  <p class="centerText">
+    If you are creating a new account,
+    <span style="color: red">Terms & Conditions</span> and
+    <span style="color: red">Privacy Policy</span>
+    will apply.
+  </p>
+</ion-content>
+

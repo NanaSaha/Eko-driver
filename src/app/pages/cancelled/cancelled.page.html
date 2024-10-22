@@ -1,0 +1,57 @@
+<ion-header no-border>
+
+  <ion-toolbar style="margin-top:20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon> <span
+        style="margin-left:30px; font-size: 1.4em">Cancelled Rides</span>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding class='yes-scroll'>
+  <div class='followed-items'>
+    <ion-list>
+      <div>
+        <ion-item class='hists' no-lines *ngFor="let event of eventList">
+          <ion-grid>
+            <ion-row>
+              <ion-label class='drive'><strong>{{event?.name}}</strong></ion-label>
+
+            </ion-row>
+            <ion-row>
+              <ion-label class='price'><strong>{{settings.appcurrency}}{{event?.price}}</strong></ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class='date'><strong>{{event?.date}}</strong></ion-label>
+            </ion-row>
+            <ion-row>
+
+              <ion-label class='location'><strong>{{event?.location}}</strong></ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class='destination'><strong>{{event?.destination}}</strong></ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class='drive'>Charge: <strong>{{event?.charge}}</strong></ion-label>
+            </ion-row>
+
+            <ion-row>
+              <ion-label class='date'>Reason: <strong>{{event?.reason}}</strong></ion-label>
+            </ion-row>
+          </ion-grid>
+
+
+
+
+
+
+
+
+
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

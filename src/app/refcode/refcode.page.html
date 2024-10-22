@@ -1,0 +1,69 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button size="large" fill="clear" (click)="goBack()">
+      <ion-icon name="arrow-back"></ion-icon>
+      <span style="padding-left: 30px; font-size: 1em">Share Referal Code</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll" padding>
+  <div text-center class="whiteFlap">
+    <div id="cash">${{randomCode}}</div>
+
+    <p>Share app with others. using this referal code. To earn Cash.</p>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button
+            icon-only
+            [ngStyle]="{'margin-top': 10 + 'px'}"
+            style="font-size: 10px"
+            color="success"
+            expand="block"
+            (click)="whatsappShare()"
+          >
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            Share to whatsapp
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button
+            icon-only
+            [ngStyle]="{'margin-top': 10 + 'px'}"
+            style="font-size: 10px"
+            color="primary"
+            expand="block"
+            (click)="FaceShare()"
+          >
+            Share To Others
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="earnings > 0">
+    <ion-title padding text-center><strong>Referal Earnings</strong></ion-title>
+    <h1 text-center>{{settings.appcurrency}} {{earnings}}</h1>
+
+    <ion-button
+      icon-only
+      [ngStyle]="{'margin-top': 20 + 'px'}"
+      color="dark"
+      expand="block"
+      (click)="Request()"
+    >
+      Request Payment
+    </ion-button>
+  </div>
+  <div *ngIf="earnings <= 0 || earnings == undefined">
+    <ion-title padding text-center><strong>Referal Earnings</strong></ion-title>
+    <h1 text-center>GH₵ 0</h1>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <img src="/assets/img/happy.png" />
+</ion-footer>

@@ -1,0 +1,149 @@
+<!-- <ion-content class="scroll">
+  <div class="whiteFlap">
+    <h4 *ngIf="status">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <strong style="color: green">{{info}}</strong>Verified
+    </h4>
+
+    <h4 *ngIf="!status">
+      <ion-icon color="danger" name="close"></ion-icon>
+      <strong>Rider</strong>Unverified
+    </h4>
+
+    <div class="bars">
+      <h2>
+        <ion-icon name="cash"></ion-icon>
+        {{settings.appcurrency}}{{charge}}
+      </h2>
+    </div>
+
+    <h4><ion-icon name="star"></ion-icon> {{up}}/{{down}}</h4>
+
+    <p><ion-icon name="pin"></ion-icon> <strong> </strong>{{loc}}</p>
+
+    <p><ion-icon name="navigate"></ion-icon> <strong> </strong>{{des}}</p>
+
+    <div style="border: 1px solid lightgreen">
+      <div id="dvMap" style="width: auto; height: 120px"></div>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button
+            [ngStyle]="{'margin-top': 20 + 'px', 'font-size': 1.1 + 'em'}"
+            color="danger"
+            expand="block"
+            shape="round"
+            (click)="closeModal()"
+          >
+            IGNORE
+          </button>
+        </ion-col>
+
+        <ion-col>
+          <button
+            [ngStyle]="{'margin-top': 20 + 'px', 'font-size': 1.1 + 'em'}"
+            color="green"
+            expand="block"
+            shape="round"
+            (click)="acceptModal()"
+          >
+            ACCEPT
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content> -->
+
+<ion-content class="backgroundColor">
+  <div class="driverFound">
+    <div class="ion-padding" class="request-for-ride2">
+      <div class="headSection">
+        <div class="moveHeader">
+          <span style="font-size: 25px; font-weight: 800">
+            <strong>Incoming Request!</strong></span
+          >
+        </div>
+      </div>
+
+      <div class="resultContainer">
+        <span style="font-size: 30px; font-weight: 800">
+          <ion-icon
+            name="checkmark-circle"
+            style="color: #fbb91d; margin-left: 10%"
+          ></ion-icon>
+          <strong style="color: green">{{info}} </strong></span
+        >
+        <div style="display: inline">
+          <div class="resultContainer2">
+            <div style="display: inline">
+              <div class="img-wrapper">
+                <ion-icon name="pin"></ion-icon>
+              </div>
+              <div class="content-wrap2">
+                <span
+                  style="font-size: 16px; font-weight: 500"
+                  class="bookPrice"
+                  >{{loc}}
+                </span>
+              </div>
+            </div>
+            <br />
+
+            <div style="display: inline">
+              <div class="img-wrapper">
+                <ion-icon name="navigate"></ion-icon>
+              </div>
+
+              <div class="content-wrap2">
+                <span
+                  style="font-size: 16px; font-weight: 500; color: #fbb91d"
+                  class="bookPrice"
+                  >{{des}}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-wrap">
+            <h4 class="butt" class="ion-text-center">
+              {{settings.appcurrency}}
+              <span style="font-size: 40px; font-weight: 800">
+                <strong>{{charge}}</strong></span
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button
+              [ngStyle]="{'margin-top': 20 + 'px', 'font-size': 1.1 + 'em'}"
+              color="dark"
+              expand="block"
+              shape="round"
+              (click)="acceptModal()"
+            >
+              ACCEPT
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button
+              [ngStyle]="{'margin-top': 20 + 'px', 'font-size': 1.1 + 'em'}"
+              color="danger"
+              expand="block"
+              shape="round"
+              (click)="closeModal()"
+            >
+              IGNORE
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

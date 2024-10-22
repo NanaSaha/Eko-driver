@@ -1,0 +1,111 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon name="arrow-back"></ion-icon>
+      <span style="margin-left: 30px; font-size: 1.4em">Documents</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="ion-text-center" class="yes-scroll">
+  <div class="followed-items">
+    <ion-list class="ion-text-center" inset="false">
+      <div class="ion-text-center" *ngFor="let event of eventList">
+        <!-- <ion-item class="driver" (click)="GotoItem(event)">
+          <img class="profile-pic" [src]="event.license_picture" />
+        </ion-item>
+        <ion-item>
+          <h3 style="font-size: 1.2em">License Number: {{event.license}}</h3>
+        </ion-item>
+
+        <ion-item class="driver">
+          <img class="profile-pic" [src]="event.car_picture" />
+        </ion-item>
+
+        <ion-item>
+          <h3 style="font-size: 1.2em">Car Plate Number: {{event.plate}}</h3>
+        </ion-item> -->
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <img [src]="event.license_picture" />
+              <h4>License Image</h4>
+            </ion-col>
+
+            <ion-col col-6>
+              <img [src]="event.car_picture" />
+              <h4>Picture of Car</h4>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-6>
+              <img [src]="event.driver_picture" />
+              <h4>Driver Picture</h4>
+            </ion-col>
+
+            <ion-col col-6>
+              <img [src]="event.insurance_picture" />
+              <h4>DVLA / Insurance</h4>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <h1 style="text-align: center; color: #fbb91d">Other Details:</h1>
+        <ion-item>
+          <ion-icon
+            name="checkmark-circle-outline"
+            style="padding-right: 20px"
+          ></ion-icon>
+          <h4 style="text-align: center">
+            Car Name: <span style="color: #fbb91d"> {{event.carName}}</span>
+          </h4>
+        </ion-item>
+        <ion-item>
+          <ion-icon
+            name="checkmark-circle-outline"
+            style="padding-right: 20px"
+          ></ion-icon>
+          <h4 style="text-align: center">
+            Car Model:<span style="color: #fbb91d"> {{event.carmodel}}</span>
+          </h4>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon
+            name="checkmark-circle-outline"
+            style="padding-right: 20px"
+          ></ion-icon>
+          <h4 style="text-align: center">
+            Car Year:<span style="color: #fbb91d">
+              {{event.caryear | date:'mediumDate'}}
+            </span>
+          </h4>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon
+            name="checkmark-circle-outline"
+            style="padding-right: 20px"
+          ></ion-icon>
+          <h4 style="text-align: center">
+            Car Plate: <span style="color: #fbb91d">{{event.plate}}</span>
+          </h4>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon
+            name="checkmark-circle-outline"
+            style="padding-right: 20px"
+          ></ion-icon>
+          <h4 style="text-align: center">
+            License Number:
+            <span style="color: #fbb91d"> {{event.license}} </span>
+          </h4>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer> </ion-footer>

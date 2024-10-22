@@ -1,0 +1,67 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon> <span
+        style="margin-left:30px; font-size: 1.4em">{{lp.translate()[0].k1}}</span>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ion-padding" class="ion-text-center" class='yes-scroll'>
+  <div class='followed-items'>
+    <ion-list *ngFor="let event of scheduleList" class="ion-text-center">
+      <h2 class="ion-text-center" *ngIf='!event.duedate >= (-1 && !bookable)'>
+        No Rides Around You Or Are Due For Starting.
+      </h2>
+      <ion-item *ngIf='event.duedate >= (-1 && bookable)'>
+
+
+        <h2 *ngIf='event.duedate == -1' class='date'><strong>
+            <ion-icon name="calendar"></ion-icon>{{lp.translate()[0].k2}}
+          </strong></h2>
+        <h2 *ngIf='event.duedate >= 0' class='date'><strong>
+            <ion-icon name="calendar"></ion-icon>{{event?.date}}
+          </strong></h2>
+        <h2 *ngIf='event.duedate >= 0 && event.time != null' class='time'><strong>
+            <ion-icon name="clock"></ion-icon>{{event?.time}}
+          </strong></h2>
+        <h2 class='drive'><strong>
+            <ion-icon name="contact"></ion-icon>{{event?.name}}
+          </strong></h2>
+        <h2 *ngIf='event.price != 0' class='price'><strong>
+            <ion-icon name="ios-cash"></ion-icon>{{settings.appcurrency}}{{event?.price}}
+          </strong></h2>
+        <p class=''>
+          <ion-icon name="locate"></ion-icon>{{event?.location}}
+        </p>
+        <p class='destination'>
+          <ion-icon name="flag"></ion-icon>{{event?.destination}}
+        </p>
+
+
+        <ion-button *ngIf='event.duedate > 0' color="gery" (click)="Warn(event.duedate)">
+          <ion-icon name="ios-car" slot="start"></ion-icon>
+          {{lp.translate()[0].k3}} {{event?.duedate}} {{lp.translate()[0].k4}}
+        </ion-button>
+
+        <ion-button *ngIf='event.duedate == 0' color="gery" (click)="Warn(event.duedate)">
+          <ion-icon name="ios-car" slot="start"></ion-icon>
+          {{lp.translate()[0].k5}}
+        </ion-button>
+
+        <ion-button *ngIf='event.duedate == -1' color="gery" (click)="Start(event)">
+          <ion-icon name="ios-car" slot="start"></ion-icon>
+          {{lp.translate()[0].k6}}
+        </ion-button>
+
+
+      </ion-item>
+    </ion-list>
+
+
+
+  </div>
+
+</ion-content>

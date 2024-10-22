@@ -1,0 +1,35 @@
+<ion-content class="o-scroll" class="ion-padding">
+  <ion-button (click)="goToBack()" fill="clear">
+    <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon>
+  </ion-button>
+
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+    <ion-item>
+      <ion-label color="primary" position="stacked"
+        >{{lp.translate()[0].f10}}</ion-label
+      >
+      <ion-input
+        formControlName="email"
+        type="email"
+        placeholder="username@domain.com"
+        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="stacked"
+        >{{lp.translate()[0].g1}}</ion-label
+      >
+      <ion-input
+        formControlName="password"
+        type="password"
+        placeholder="password"
+        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!signupForm.valid">
+      Sign Up
+    </ion-button>
+  </form>
+</ion-content>

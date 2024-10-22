@@ -1,0 +1,53 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 25px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon name="arrow-back"></ion-icon> <span style="margin-left:30px; font-size: 1.4em">Document Detail</span>
+    </ion-button>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content class="scroll">
+  <ion-row padding>
+  </ion-row>
+  <div>
+    <div text-center>
+      <h3 class='name'>{{data.title}}</h3>
+      <h1 class='name'>Comment :{{data.comment}}</h1>
+      <hr>
+    </div>
+
+    <div>
+
+
+      <ion-button padding *ngIf='data.filetype == 0' class='button' expand='block' (click)='UploadFile(data.id)'>
+        Add File
+      </ion-button>
+
+
+      <ion-button padding *ngIf='data.filetype == 1' class='button' expand='block' (click)='AddFile(data.id, true)'>
+        Add Info
+      </ion-button>
+
+    </div>
+
+    <div text-center>
+      <h1 class='name'> Current File :{{data.comment}}</h1>
+    </div>
+
+
+    <div *ngIf="data.data">
+      <img id="my-pic" [src]="data.data" />
+    </div>
+
+    <div *ngIf="!data.data">
+      <img id="my-pic" [src]="captureDataUrl" *ngIf="captureDataUrl" />
+
+    </div>
+
+
+
+  </div>
+
+</ion-content>

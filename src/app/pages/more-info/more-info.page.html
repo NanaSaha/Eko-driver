@@ -1,0 +1,305 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <h4 id="textLogin">Complete this registration to drive with Ekodot</h4>
+
+    <div class="container">
+      <ul class="progressbar">
+        <li [class.active]="step == 1">Personal Info</li>
+
+        <li [class.active]="step == 2">Car Info</li>
+        <li [class.active]="step == 3">Complete</li>
+      </ul>
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="background">
+
+
+    <form [formGroup]="signupForm" class="padd">
+      <div *ngIf="step == 1">
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">First Name</ion-label>
+          <ion-input type="text" formControlName="first_name" name="first_name"
+            [class.invalid]="!signupForm.controls.first_name.valid && (signupForm.controls.first_name.dirty )"></ion-input>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.first_name.valid  && (signupForm.controls.first_name.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please enter first name.</b>
+        </p>
+        <br />
+
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Last Name</ion-label>
+          <ion-input type="text" formControlName="last_name" name="last_name"
+            [class.invalid]="!signupForm.controls.last_name.valid && (signupForm.controls.last_name.dirty )"></ion-input>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.last_name.valid  && (signupForm.controls.last_name.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please enter Last Name.</b>
+        </p>
+        <br />
+
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Date Of Birth</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY " [min]="1920-01-01" [max]="2003-01-01" formControlName="dob"
+            placeholder="eg 2003-01-01"
+            [class.invalid]="!signupForm.controls.dob.valid && (signupForm.controls.dob.dirty )"></ion-datetime>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.dob.valid  && (signupForm.controls.dob.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please choose date of birth</b>
+        </p>
+
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Gender</ion-label>
+          <ion-select formControlName="gender" name="gender"
+            [class.invalid]="!signupForm.controls.gender.valid && (signupForm.controls.gender.dirty )">
+            <ion-select-option value="Male">Male</ion-select-option>
+            <ion-select-option value="Female">Female</ion-select-option>
+
+
+
+          </ion-select>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.gender.valid  && (signupForm.controls.gender.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please choose a Gender </b>
+        </p>
+        <br />
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Email</ion-label>
+          <ion-input type="email" formControlName="email" name="email"
+            [class.invalid]="!signupForm.controls.email.valid && (signupForm.controls.email.dirty )"></ion-input>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.email.valid  && (signupForm.controls.email.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please enter a valid email</b>
+        </p>
+        <br />
+
+        <!-- <ion-item>
+        <ion-label position="floating" style="color: #fbb91d !important"
+          >Phone Number</ion-label
+        >
+        <ion-input
+          type="number"
+            placeholder="0276XXXXXX"
+          [(ngModel)]="phonenumber"
+          formControlName="phonenumber"
+          [class.invalid]="!signupForm.controls.phonenumber.valid && (signupForm.controls.phonenumber.dirty )"
+        ></ion-input>
+      </ion-item>
+      <p
+        *ngIf="!signupForm.controls.phonenumber.valid  && (signupForm.controls.phonenumber.dirty)"
+      >
+        <b style="color: rgb(255, 0, 0)">Please enter your phone number</b>
+      </p>
+
+      <br /> -->
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">City</ion-label>
+          <ion-input type="text" placeholder="eg Accra" [(ngModel)]="city" formControlName="city"
+            [class.invalid]="!signupForm.controls.city.valid && (signupForm.controls.city.dirty )"></ion-input>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.city.valid  && (signupForm.controls.city.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please enter your city</b>
+        </p>
+
+        <br />
+
+
+      </div>
+
+      <div *ngIf="step == 2">
+        <ion-item>
+          <br />
+          <ion-label position="floating" style="color: #fbb91d !important">Car name</ion-label>
+          <ion-input type="text" formControlName="carName" name="carName"
+            [class.invalid]="!signupForm.controls.carName.valid && (signupForm.controls.carName.dirty )"></ion-input>
+        </ion-item>
+        <br />
+
+        <ion-item>
+          <br />
+          <ion-label position="floating" style="color: #fbb91d !important">Car Model</ion-label>
+          <ion-input type="text" formControlName="model" name="model"
+            [class.invalid]="!signupForm.controls.model.valid && (signupForm.controls.model.dirty )"></ion-input>
+        </ion-item>
+        <br />
+
+
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Car Color</ion-label>
+          <ion-select formControlName="car_color" name="car_color"
+            [class.invalid]="!signupForm.controls.car_color.valid && (signupForm.controls.car_color.dirty )">
+
+            <ion-select-option value="Red">Red</ion-select-option>
+
+            <ion-select-option value="Black">Black</ion-select-option>
+            <ion-select-option value="Blue">Blue</ion-select-option>
+            <ion-select-option value="Yellow">Yellow</ion-select-option>
+            <ion-select-option value="Orange">Orange</ion-select-option>
+            <ion-select-option value="Pink">Pink</ion-select-option>
+            <ion-select-option value="Green">Green</ion-select-option>
+            <ion-select-option value="White">White</ion-select-option>
+            <ion-select-option value="Silver">Silver</ion-select-option>
+            <ion-select-option value="Gray">Gray</ion-select-option>
+            <ion-select-option value="Beige">Beige</ion-select-option>
+            <ion-select-option value="Brown">Brown</ion-select-option>
+            <ion-select-option value="Gold">Gold</ion-select-option>
+            <ion-select-option value="Cream">Cream</ion-select-option>
+            <ion-select-option value="Purple">Purple</ion-select-option>
+
+
+
+
+
+
+
+          </ion-select>
+        </ion-item>
+        <p *ngIf="!signupForm.controls.car_color.valid  && (signupForm.controls.car_color.dirty )">
+          <b style="color: rgb(255, 0, 0)">Please choose a car type </b>
+        </p>
+        <br />
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Car Year</ion-label>
+          <ion-datetime displayFormat="YYYY " [min]="1990" [max]="2030" formControlName="year" placeholder="eg 2003"
+            [class.invalid]="!signupForm.controls.year.valid && (signupForm.controls.year.dirty )"></ion-datetime>
+        </ion-item>
+        <br />
+
+        <ion-item>
+          <br />
+          <ion-label position="floating" style="color: #fbb91d !important">Car Number Plate</ion-label>
+          <ion-input type="text" formControlName="plate" name="plate"
+            [class.invalid]="!signupForm.controls.plate.valid && (signupForm.controls.plate.dirty )"></ion-input>
+        </ion-item>
+        <br />
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Car Seat Number</ion-label>
+          <ion-select formControlName="seat" multiple="false">
+            <ion-select-option data-countryCode="2" value="2">2</ion-select-option>
+            <ion-select-option data-countryCode="4" value="4">4</ion-select-option>
+            <ion-select-option data-countryCode="5" value="5" selected>5</ion-select-option>
+            <ion-select-option data-countryCode="6" value="6">6</ion-select-option>
+          </ion-select>
+
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Car Transmission</ion-label>
+          <ion-select formControlName="cartypes" multiple="false">
+            <ion-select-option data-countryCode="1" value="Automatic" selected>Automatic</ion-select-option>
+            <ion-select-option data-countryCode="2" value="Manual">Manual</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <br>
+      </div>
+
+      <div *ngIf="step == 3">
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">License Number</ion-label>
+          <ion-input class="input" type="text" placeholder="" formControlName="license"
+            [class.invalid]="!signupForm.controls.license.valid && (signupForm.controls.license.dirty )"></ion-input>
+        </ion-item>
+
+        <br />
+        <ion-item>
+          <ion-label position="floating" style="color: #fbb91d !important">Organization</ion-label>
+
+          <ion-select multiple="false" formControlName="company">
+            <ion-select-option data-countryCode="Private" value="Private" selected>Private</ion-select-option>
+            <ion-select-option data-countryCode="Company" value="Company">Company</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="signupForm.value.company == 'Company'">
+          <ion-label position="floating" style="color: #fbb91d !important">Enter company name</ion-label>
+          <ion-input class="input" type="text" placeholder="" formControlName="company_name"></ion-input>
+        </ion-item>
+
+
+      </div>
+
+      <p class="pad">
+        <ion-row>
+          <ion-col col-6 *ngIf="step != 1">
+            <!-- <ion-buttons>
+            <button
+              ion-button
+              color="dark"
+              icon-end
+              (tap)="prev()"
+              class="button button-dark customBtn"
+            >
+              Previous <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            
+          </ion-buttons> -->
+
+            <ion-button size="large" color="dark" id="mybutton" expand="block" (click)="prev()">
+              PREVIOUS <ion-icon name="arrow-back"></ion-icon></ion-button>
+          </ion-col>
+
+          <ion-col col-6 *ngIf="step != 3">
+
+            <ion-button size="large" color="primary" id="mybutton" expand="block" (click)="submit()">
+              NEXT <ion-icon name="arrow-forward"></ion-icon></ion-button>
+            <!-- <ion-buttons>
+            <button
+              ion-button
+              color="dark"
+              icon-end
+              (tap)="submit()"
+              class="button button-dark customBtn"
+
+            >
+              Next <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-buttons> -->
+          </ion-col>
+
+          <ion-col col-6 *ngIf="step == 3">
+            <!-- <ion-buttons>
+            <button
+              ion-button
+              color="dark"
+              icon-end
+              [disabled]="!this.signupForm.valid"
+              (tap)="signup()"
+              class="button button-dark customBtn"
+            >
+              Complete <ion-icon name="checkmark-circle"></ion-icon>
+            </button>
+          </ion-buttons> -->
+
+            <ion-button icon-end [disabled]="!this.signupForm.valid" size="large" color="primary" id="mybutton"
+              expand="block" (click)="next()">
+              COMPLETE <ion-icon name="checkmark-circle"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+
+        <br />
+        <br />
+      </p>
+
+      <p>
+        <b style="color: rgb(0, 0, 0)">
+          <p style="color: rgb(0, 0, 0)">
+            Already have an account ?
+            <a tappable (click)="login()" style="color: #fbb91d">Log In</a>
+          </p>
+        </b>
+      </p>
+
+      <p>
+        <b style="color: rgb(0, 0, 0)">
+          <p style="color: rgb(0, 0, 0)">
+            By clicking the button to signup, you're agreeing to our
+            <a tappable style="color: #fbb91d">terms of service</a>
+          </p>
+        </b>
+      </p>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-button fill="clear" (click)="goBack()" color="primary">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon>
+      <span style="margin-left: 30px; font-size: 1.4em"
+        >{{lp.translate()[0].b10}}</span
+      >
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding" class="yes-scroll">
+  <div class="followed-items">
+    <ion-list class="ion-text-center" class="padding">
+      <div *ngFor="let event of eventList">
+        <ion-item class="hists" lines="none">
+          <div *ngIf="event.name != null" (click)="goToEventDetail(event.id)">
+            <!-- <h2 class='location'><strong>{{settings.appcurrency}}
+                {{((event?.price) + (event?.tip || 0)).toFixed(2)}}</strong></h2> -->
+
+            <h2 class="location">
+              <strong>{{settings.appcurrency}} {{event?.realPrice}}</strong>
+            </h2>
+            <h2 class="date"><strong>{{event?.date}}</strong></h2>
+          </div>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div>
+          <h1 style="color: rgb(0, 110, 0); text-align: center">
+            <strong>{{settings.appcurrency}} {{mr}}</strong>
+          </h1>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <!-- <ion-button
+    size="large"
+    shape="round"
+    color="light"
+    expand="block"
+    (click)="OpenCancelled()"
+  >
+    <span style="color: blue">View Cancelled Trips</span>
+  </ion-button> -->
+</ion-footer>

@@ -1,0 +1,54 @@
+ion-content {
+  // --background: url("src/assets/img/a-splash-1.png") no-repeat center / cover;
+  background-size: cover;
+  background-position: center;
+  form {
+    margin-bottom: 26px;
+    height: 300px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: 1px solid rgba(212, 212, 212, 0.93);
+  }
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+  ion-label {
+    text-align: center;
+  }
+  .o_section {
+    position: fixed;
+    background: #f7f7f7;
+    height: 150px;
+    top: 70%;
+    width: 90%;
+    padding: 4px;
+    border-radius: 30px;
+    left: 5%;
+    border: 1px solid rgba(212, 212, 212, 0.93);
+    animation-direction: alternate;
+    animation-name: bump;
+    animation-duration: 0.8s;
+    z-index: 12;
+  }
+  @keyframes bump {
+    0% {
+      top: 100%;
+    }
+    // 50% {top: 90%;}
+    100% {
+      top: 70%;
+    }
+  }
+  ion-input {
+    padding: 5px;
+  }
+  .invalid {
+    border: 1px solid #ff6153;
+  }
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+}

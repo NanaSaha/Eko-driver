@@ -1,0 +1,65 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon>
+      <span style="margin-left: 30px; font-size: 1.4em"
+        >Start A Conversation</span
+      >
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="ion-text-center" class="yes-scroll">
+  <div class="followed-items">
+    <ion-list class="ion-text-center" lines="none">
+      <div class="ion-text-center" *ngFor="let event of eventList">
+        <ion-item text-wrap class="driver" *ngIf="!event.user" color="primary">
+          <p>{{event.admin}}</p>
+        </ion-item>
+        <ion-item text-wrap class="user" *ngIf="!event.admin" color="primary">
+          <p>{{event.user}}</p>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-padding">
+  <!-- <ion-item class="ion-padding">
+    <ion-label class='stack' class="ion-padding" position="stacked">Emergency SOS</ion-label>
+    <ion-select [(ngModel)]="cartransmission" multiple="false">
+      <ion-select-option data-countryCode="1" value="8500" selected>car has been hijacked</ion-select-option>
+      <ion-select-option data-countryCode="2" value="9000">car has broken down</ion-select-option>
+      <ion-select-option data-countryCode="1" value="7000">involved in a car accident</ion-select-option>
+      <ion-select-option data-countryCode="2" value="1000">police/sars/road safety/law enforcement harassment
+      </ion-select-option>
+    </ion-select>
+  </ion-item> -->
+  <h4 class="ion-text-center">Available 24/7</h4>
+  <!-- <ion-grid> -->
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-button
+        class="button"
+        class="ion-text-center"
+        color="dark"
+        (click)="Send()"
+      >
+        Send Message
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button
+        class="ion-text-center"
+        class="button"
+        color="primary"
+        (click)="callNow()"
+      >
+        <ion-icon name="call" class="callIcon"></ion-icon>
+        Call Eko
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <!-- </ion-grid> -->
+</ion-footer>

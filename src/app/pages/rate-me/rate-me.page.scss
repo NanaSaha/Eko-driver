@@ -1,0 +1,46 @@
+.reviewspace {
+  margin-top: 30%;
+}
+
+form {
+  height: 200px auto;
+  .button {
+    border-radius: 12px;
+  }
+}
+
+#myInput {
+  border: 1.5px solid rgb(10, 100, 235);
+  border-radius: 12px;
+  height: 70%;
+  margin-left: 0%;
+  margin-bottom: 6%;
+}
+
+.sc-ion-modal-md-h {
+  --width: 86%;
+  --min-width: auto;
+  --max-width: auto;
+  --height: 70% !important;
+  --min-height: auto;
+  --max-height: auto;
+  --overflow: hidden;
+  --border-radius: 0;
+  --border-width: 0;
+  --border-style: none;
+  --border-color: transparent;
+  --background: var(--ion-background-color, #fff);
+  --box-shadow: none;
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  // bottom: 0;
+  // display: -ms-flexbox;
+  // display: flex;
+  // position: absolute;
+  // -ms-flex-align: center;
+  // align-items: center;
+  // -ms-flex-pack: center;
+  // justify-content: center;
+  // contain: strict;
+}

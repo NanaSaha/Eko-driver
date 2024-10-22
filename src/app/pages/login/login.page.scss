@@ -1,0 +1,681 @@
+.bk-color {
+  // background: #fbb91d;
+  // height: 15%;
+  position: relative;
+  // z-index: 9999999999999;
+  text-align: center;
+}
+
+.countryCode{
+   // background-color: #fbb91d;
+
+     border: 1px solid gainsboro;
+  border-radius: 10px;
+  // margin-left: 2px;
+  // background-color: #fbb91d !important;  
+}
+
+
+
+.imgBack {
+  background-image: url(/assets/img/login2.jpg);
+  //background-image: url("https://res.cloudinary.com/sahanana/image/upload/v1640088019/driving_ytegfi.gif");
+
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+}
+
+.BigText {
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: -0.1px;
+  line-height: 30px;
+  margin-bottom: 2px;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+#verySmall {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.1px;
+  line-height: 30px;
+  margin-bottom: 2px;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.smallText {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: -0.1px;
+  line-height: 30px;
+  margin-bottom: 2px;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.backText {
+  line-height: 30px;
+  text-align: left;
+  margin-left: 5%;
+  padding-top: 65%;
+}
+
+@media (min-width: 320px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 50%;
+  }
+}
+
+@media (min-width: 360px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 50%;
+  }
+  .smallText {
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 375px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 58%;
+  }
+  .smallText {
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 411px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 55%;
+  }
+  .smallText {
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 540px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 45%;
+  }
+  .smallText {
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 600px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 60%;
+  }
+
+  .smallText {
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 50%;
+  }
+
+  .smallText {
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+@media (min-width: 800px) {
+  .backText {
+    line-height: 30px;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 50%;
+  }
+
+  .smallText {
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+    line-height: 45px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+
+  .BigText {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -0.1px;
+    line-height: 50px;
+    margin-bottom: 2px;
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+  ion-item {
+    --border-color: var(--ion-color-danger, #ffffff);
+    --border-color: white; // default underline color
+    --highlight-color-invalid: rgb(255, 255, 255); // invalid underline color
+    --highlight-color-valid: rgb(255, 255, 255); // valid underline color
+  }
+
+.flag {
+  width: 20px;
+  /* height: 10px; */
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.centerLogin {
+  margin-top: 1%;
+  background-color: white;
+  z-index: 999999;
+}
+
+.headerText {
+  text-align: center;
+  font-size: 20px !important;
+  margin-bottom: 5%;
+}
+
+.button-native {
+  --background: black !important;
+  --background-hover: black !important;
+}
+
+.alignCen {
+  position: relative !important;
+  text-align: center !important;
+}
+.background_whole {
+  z-index: 0 !important;
+  --background: linear-gradient(360deg, #fff 80%, #000000 50%) !important;
+}
+.move_segment {
+  margin-top: 10%;
+}
+
+.logoSize {
+  text-align: center;
+  width: 30%;
+  align-content: center;
+  margin-left: 0%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  // position: fixed;
+}
+
+.centerText {
+  text-align: center;
+  font-size: 15px !important;
+
+  margin-top: 30%;
+  position: fixed;
+  color: #000000;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#overlay {
+  position: fixed;
+  /* display: none; */
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000061;
+  z-index: 10;
+  cursor: pointer;
+}
+
+ion-content[_ngcontent-dog-c1] .phoneCountry[_ngcontent-dog-c1] {
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  margin-left: 2px;
+  background-color: #000000 !important;
+  color: #fbb91d;
+}
+
+.footer-md:before {
+  left: 0;
+  top: -2px;
+  bottom: auto;
+  background-position: left 0 top 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-image: url();
+  background-repeat: repeat-x;
+  content: "" !important;
+}
+
+// .car {
+//   position: absolute;
+//   // top: 40%;
+//   // width: 50%;
+//   left: 25%;
+// }
+
+// .road1 {
+//   // left: -5139px;
+//   animation: road1 10s infinite linear reverse;
+// }
+
+// @keyframes road1 {
+//   from {
+//     left: -5139px;
+//   }
+//   to {
+//     left: 0px;
+//   }
+// }
+
+ion-content {
+  // --background: url("src/assets/img/a-splash-1.png") no-repeat center / cover;
+  @keyframes wiki {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  form {
+    margin-bottom: 16px;
+    height: 300px;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    // margin-top: 85%;
+    margin-top: 5%;
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 0px 1.5px 0px 0px rgba(3, 3, 3, 0.253);
+    ion-button {
+      margin-top: 10px !important;
+      border-radius: 12px;
+    }
+  }
+  .new-background-color {
+    margin-top: 10px;
+    //background: url("src/assets/img/a-splash-1.png") no-repeat center / cover;
+  }
+  p {
+    font-size: 0.8em;
+    //color: #d2d2d2;
+  }
+  ion-input {
+    padding: 30px;
+  }
+  ion-item {
+    --inner-padding-start: 0px;
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    padding: 2px;
+  }
+  ion-button {
+    --background: rgb(0, 0, 0) !important;
+    height: 50px;
+    color: #ffffff;
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    border-radius: 10px;
+  }
+  .terms {
+    margin-top: 40px;
+    color: #fbb91d;
+    text-align: center;
+  }
+  .logo-text {
+    color: #fbb91d;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .logo-text1 {
+    color: #fbb91d;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  .o_section {
+    animation-direction: alternate;
+    animation-name: wiki;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+  }
+
+  .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: 767px) {
+    ion-card {
+      width: 600px;
+      margin: auto;
+    }
+  }
+  ion-card {
+    --background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    overflow: scroll;
+  }
+  .input {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    font-size: 0.9em !important;
+  }
+  .input {
+    height: 52px !important;
+  }
+  .otpinput {
+    letter-spacing: 30px;
+    -webkit-padding-end: 0;
+    --padding-end: 0;
+    font-size: 30px;
+    border: none;
+    background: white;
+  }
+  .white {
+    color: white;
+  }
+  .OTP-border {
+    ion-col {
+      div {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  .small {
+    font-size: 13px;
+    a {
+      text-decoration: unset !important;
+    }
+  }
+  .button-color {
+    background-color: var(--ion-color-mytheme);
+  }
+  .logo {
+    width: 1.25em !important;
+  }
+  .grid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-logo {
+    height: 120px;
+    width: 120px;
+  }
+  .fire-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .block {
+    display: block;
+  }
+  .transition {
+    background: linear-gradient(to right, #fbb91d 14%, #fbb91d 96%);
+    color: black;
+  }
+  .btn-color {
+    color: #fbb91d;
+  }
+  .error {
+    color: red;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .invoice-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    color: #555;
+  }
+
+  .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+  }
+
+  .invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .invoice-box table tr td:nth-child(2) {
+    text-align: right;
+  }
+
+  .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+  }
+  .btn-transition {
+    background: linear-gradient(to right, #000000 14%, #000000 96%);
+    color: #fbb91d;
+  }
+
+  .emailbtn {
+    background-color: #000000;
+    color: #fbb91d;
+  }
+
+  .input {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    font-size: 0.9em !important;
+  }
+  .phoneCountry {
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    margin-left: 2px;
+    background-color: #000000 !important;
+    color: #fbb91d;
+  }
+  .phoneAuthGrid {
+    border: 1px solid #ccc;
+    margin: 0 7px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    z-index: 0 !important;
+  }
+  .invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+  }
+
+  .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+  }
+
+  .invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+  }
+
+  .invoice-box table tr.details td {
+    padding-bottom: 20px;
+  }
+
+  .invoice-box table tr.item td {
+    border-bottom: 1px solid #eee;
+  }
+
+  .invoice-box table tr.item.last td {
+    border-bottom: none;
+  }
+
+  .invoice-box table tr.total td:nth-child(2) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .invoice-box table tr.top table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    .invoice-box table tr.information table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  /** RTL **/
+  .rtl {
+    direction: rtl;
+    font-family: Tahoma, "Helvetica Neue", "Helvetica", Helvetica, Arial,
+      sans-serif;
+  }
+
+  .rtl table {
+    text-align: right;
+  }
+
+  .rtl table tr td:nth-child(2) {
+    text-align: left;
+  }
+}
+
+// .car {
+//   margin: 0 auto;
+//   position: relative;
+//   width: 400px;
+//   animation: moving 10s linear -2s infinite;
+// }
+// .car:before {
+//   content: "";
+//   display: block;
+//   animation: carmove 3.1s infinite linear;
+//   background: url("https://i.stack.imgur.com/xWNOG.png") center/cover;
+//   padding-top: 45.25%;
+// }
+
+// .weel {
+//   animation: wheel 10s infinite -2s linear;
+//   background: url("https://i.stack.imgur.com/0Osjx.png") center/cover;
+//   position: absolute;
+//   bottom: 0.8%;
+//   width: 14.15%;
+// }
+// .weel:before {
+//   content: "";
+//   display: block;
+//   padding-top: 100%;
+// }
+// .weel1 {
+//   left: 14.5%;
+// }
+// .weel2 {
+//   right: 10%;
+// }
+
+.ionic-selectable:not(.ionic-selectable-has-label) {
+  background: #000000 !important;
+  color: #fbb91d !important;
+  border-radius: 10px;
+}
+
+.ionic-selectable-icon-inner {
+  color: var(--icon-color, #fbb91d) !important;
+}

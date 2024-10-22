@@ -1,0 +1,55 @@
+<ion-header no-border>
+  <ion-button (click)="closeModal()" ion-button color="primary" fill="clear">
+    <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon>
+    <span style="margin-left: 30px; font-size: 1.4em">CLOSE</span>
+  </ion-button>
+</ion-header>
+
+<ion-content class="scroll" padding>
+  <!-- <ion-title text-center>FARE BREAKDOWN</ion-title>
+
+  <ion-title padding text-center>RIDER PAY</ion-title>
+  <ion-title padding text-center
+    ><strong>{{settings.appcurrency}}{{(riderpaid)}}</strong></ion-title
+  > -->
+
+  <!-- <ion-item no-lines padding>
+    <div text-center>
+      <ion-title>Ride Cost</ion-title>
+      <ion-title padding text-center
+        ><strong>{{settings.appcurrency}}{{(riderpaid)}}</strong></ion-title
+      >
+    </div>
+  </ion-item> -->
+
+  <div text-center class="whiteFlap">
+    <ion-title>Trip Information</ion-title>
+  </div>
+  <div text-center class="whiteFlap">
+    <ion-item>
+      <h4 text-center>Pickup {{info.Client_locationName}}</h4></ion-item
+    >
+    <ion-item>Drop off {{info.Client_destinationName}}</ion-item>
+    <!-- <ion-item><h4 text-center>Time Accepted {{accepted}}</h4> </ion-item> -->
+    <ion-item> <h4 text-center>Time Arrived {{arrived}}</h4></ion-item>
+  </div>
+
+  <div padding text-center id="buttonContainer2">
+    <ion-item no-lines detail-none ion-item class="guttonz">
+      <ion-label class="stack" (click)="onChange($event)">
+        <h1 style="text-align: center">CANCEL THIS TRIP</h1>
+      </ion-label>
+      <!-- <ion-select
+        [(ngModel)]="currentCar"
+        (ionChange)="onChange($event)"
+        multiple="false"
+      >
+        <div *ngFor="let item of items">
+          <ion-select-option value="{{item.text}}"
+            >{{item.text}}</ion-select-option
+          >
+        </div>
+      </ion-select> -->
+    </ion-item>
+  </div>
+</ion-content>

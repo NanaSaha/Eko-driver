@@ -1,0 +1,72 @@
+ion-card-header {
+  text-align: center;
+}
+
+.drive {
+  color: rgb(10, 100, 235);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.drop-zone {
+  background-color: #f6f6f6;
+  border: dotted 3px #dedddd;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.selfie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#my-pic {
+  width: 90% !important;
+  height: 45% !important;
+  border-radius: 12px;
+  border: 1px solid #f7f7f7;
+  vertical-align: center;
+  margin: 5%;
+}
+
+.file-input-container {
+  text-align: right;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  label {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+
+.price {
+  color: green;
+}
+
+.date {
+  color: orangered;
+}
+
+.destination {
+  color: cadetblue;
+}
+
+h3 {
+  font-size: 4em;
+}
+
+ion-item {
+  margin-top: 24px;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.93) !important;
+}

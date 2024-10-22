@@ -1,0 +1,37 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top: 20px">
+    <ion-button size="large" fill="clear" (click)="goBack()">
+      <ion-icon name="arrow-back"></ion-icon>
+      <span style="padding-left: 30px; font-size: 1em">Promo Code</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="o-scroll" padding>
+  <div id="recaptcha-container"></div>
+
+  <h3>Enter your code to activate your discount</h3>
+  <div class="form">
+    <ion-input
+      class="input"
+      lines="none"
+      type="text"
+      placeholder="eg. RIDE4EKODOT"
+      [(ngModel)]="code"
+    ></ion-input>
+
+    <ion-button
+      icon-only
+      [ngStyle]="{'margin-top': 20 + 'px'}"
+      color="primary"
+      expand="block"
+      (click)="apply_code(code)"
+    >
+      Apply Code
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <img src="/assets/img/happy2.png" />
+</ion-footer>

@@ -1,0 +1,36 @@
+
+<ion-header no-border>
+  <ion-toolbar style="margin-top:20px">
+
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon> <span
+        style="margin-left:30px; font-size: 1.4em">Earnings</span>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="no-scroll" class="ion-padding">
+
+  <h5 class="ion-padding" text-center>Total Earnings: {{earnings}}</h5>
+
+  <h6 class="ion-text-center">
+    Enter ID to recieve earnings
+  </h6>
+
+  <form id='myFomr' [formGroup]="cardpaymentForm" (submit)="AddCard()" novalidate>
+
+
+    <ion-item>
+      <ion-label color='primary' stacked>{{lp.translate()[0]}}.uid</ion-label>
+      <ion-input id='tezt' formControlName="card" placeholder="Enter Your Code"
+        [class.invalid]="!cardpaymentForm.controls.card.valid && cardpaymentForm.controls.card.dirty"></ion-input>
+    </ion-item>
+
+    <ion-button class='button' expand="block" type="submit" [disabled]="!cardpaymentForm.valid">
+      Accept
+    </ion-button>
+
+  </form>
+
+</ion-content>

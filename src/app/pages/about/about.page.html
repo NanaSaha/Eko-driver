@@ -1,0 +1,45 @@
+<ion-header no-border>
+
+  <ion-toolbar style="margin-top:20px">
+    <ion-button (click)="Back()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon> <span
+        style="margin-left:30px; font-size: 1.4em">About</span>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+
+<ion-content class="no-scroll" class="ion-padding">
+
+  <ion-button size="large" color="primary" expand="block" (click)="gotoSite()">
+    {{settings.appName}} {{Lang[0].website}}
+  </ion-button>
+  <ion-button size="large" color="primary" expand="block" (click)="gotoSite2()">
+    {{settings.appName}} {{Lang[0].a1}}
+  </ion-button>
+  <ion-button size="large" color="primary" expand="block" (click)="gotoSite3()">
+    FAQ
+  </ion-button>
+
+  <br>
+  <ion-button size="large" color="primary" expand="block" (click)="gotoSite9()">
+    Facebook
+  </ion-button>
+
+  <ion-button size="large" color="danger" expand="block" (click)="gotoSite10()">
+    Instagram <strong>@{{settings.appName}}</strong>
+  </ion-button>
+  <br>
+  <br>
+  <ion-button size="large" class="ion-text-center" color="primary" fill="clear" expand="block" (click)="gotoSite4()">
+    Terms and Conditions
+  </ion-button>
+
+  <ion-label class="ion-padding" class="ion-text-center">
+
+
+  </ion-label>
+</ion-content>

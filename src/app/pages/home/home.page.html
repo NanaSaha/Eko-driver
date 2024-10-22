@@ -1,0 +1,373 @@
+<ion-content class="no-scroll">
+  <div id="map-canvas" [ngClass]="{'mess2_short': shortMap == false,'mess_defualt': defaultMap == true}">
+    <div class="topBar">
+      <ion-menu-toggle (click)="toggle()" autoHide="false">
+        <!-- *ngIf="hasNotPicked && hasEnded" -->
+        <ion-button class="round" color="trans" style="
+            --border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            --vertical-align: middle;
+            --padding-start: -5px;
+            --padding-end: -5px;
+          ">
+          <ion-icon name="ios-menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+
+      <div id="buttonContainer">
+        
+      
+
+
+        <ion-button *ngIf="this.pop.loggedOff == false" size="large" shape="round" color="primary" class="button"
+          (click)="goOffline()">
+          <ion-grid style="color: #f00a0a">
+            <ion-row>
+              <ion-col>
+                GO OFFLINE
+                <ion-title style="color: #fbb91d"></ion-title>
+              </ion-col>
+            </ion-row>
+            <!-- <ion-row>
+                      <ion-col>
+                        <ion-title
+                          style="color: rgb(175, 236, 255)"
+                          id="demo2"
+                        ></ion-title>
+                      </ion-col>
+                    </ion-row> -->
+          </ion-grid>
+        </ion-button>
+
+      
+
+        <ion-button class="button" size="large" color="primary" shape="round"
+          *ngIf="this.pop.loggedOff && hasEnded && !hasNotFoundMap || ph.isOffline == true" (click)="goOnline()">
+          <!-- <div style="color: #f00a0a">OFFLINE</div> -->
+          <div style="color: #228b22">GO ONLINE</div>
+          <!-- <div *ngIf="this.zoner">ZONE MODE</div> -->
+        </ion-button>
+
+        <ion-button *ngIf="this.pop.loggedOff && hasNotFoundMap">
+          <ion-spinner color="#ffffff" name="bubbles"></ion-spinner>
+        </ion-button>
+      </div>
+
+      <div class="mid-right">
+        <ion-fab slot="fixed">
+          <ion-fab-button color="trans"> SOS </ion-fab-button>
+          <ion-fab-list side="top">
+            <ion-fab-button (click)="call_phone()"><ion-icon name="call"> </ion-icon></ion-fab-button>
+          </ion-fab-list>
+
+          <ion-fab-list side="start">
+            <ion-fab-button (click)="call_phone_other()"><ion-icon name="body"> </ion-icon></ion-fab-button>
+          </ion-fab-list>
+
+          <ion-fab-list side="bottom">
+            <ion-fab-button (click)="call_phone_other()"><ion-icon name="bonfire"> </ion-icon></ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </div>
+
+      <div *ngIf="isArrived == true && isPiked == true">
+        <div class="mid-right2">
+          <ion-fab slot="fixed">
+            <ion-fab-button (click)="gotoDestination()">
+              <ion-icon name="navigate"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </div>
+      </div>
+
+      <div *ngIf="!hasEnded">
+        <div *ngIf="!isArrived">
+          <div class="mid-right2">
+            <ion-fab slot="fixed">
+              <ion-fab-button (click)="gotoMap()">
+                <ion-icon name="compass"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="isArrived == true && isPiked == true">
+        <div class="mid-right3">
+          <ion-fab slot="fixed">
+            <ion-button (click)="presentActionSheet()" color="dark">
+              <ion-icon name="share"></ion-icon>
+              Share Trip
+            </ion-button>
+      
+          </ion-fab>
+        </div>
+      </div>
+
+
+      <!-- <div *ngIf="isArrived == true && isPiked == false">
+        <div class="mid-right4">
+      
+          <ion-fab slot="fixed">
+      
+            <ion-button color="dark">
+              <ion-icon name="alarm"> </ion-icon>
+              <span style="text-transform: none">Wait Time for:: </span> <br>
+              <span id="wait_time"> </span>
+            </ion-button>
+      
+          </ion-fab>
+        </div>
+      </div> -->
+      
+      
+      <div *ngIf="isPaused == true">
+        <div class="mid-right5">
+      
+          <ion-fab slot="fixed">
+      
+            <ion-button color="dark">
+              <ion-icon name="alarm"> </ion-icon>
+              <span style="text-transform: none">Paused Time for:: </span> <br>
+              <span id="pause_time"> </span>
+            </ion-button>
+      
+          </ion-fab>
+        </div>
+      </div>
+
+
+  
+    </div>
+  </div>
+
+
+
+  <div id="map_layer">
+  
+    <label *ngIf="hasEnded == false">
+      <input type="checkbox" name="run" value="click" (click)="completeItem()" />
+      <div id="button1" class="button" style="z-index: 999999999999">
+        <ion-icon name="ios-more" style="font-size: 34px; margin-top: 13px"></ion-icon>
+  
+        <button class="main-con">
+          <div class="driverFoundNew" *ngIf="hasEnded == false">
+            <div class="ion-padding" class="request-for-ride2">
+              <div class="headSection" *ngIf="hasNotPicked && pop.hasPicked == false">
+                <div class="moveHeader">
+                  <span style="
+                          font-size: 25px;
+                          font-weight: 800;
+                          margin-left: 10%;
+                        ">
+                    <strong>Pickup Rider</strong></span>
+                  <br />
+                  <span class="centerText">ETA {{dProvider.time}}</span>
+                </div>
+              </div>
+  
+              <div class="headSection" *ngIf="!hasNotPicked && isPiked == true">
+                <div class="moveHeader">
+                  <span style="
+                          font-size: 25px;
+                          font-weight: 800;
+                          margin-left: 10%;
+                        ">
+                    <strong>Start Your Ride</strong></span>
+                  <br />
+                  <span class="centerText">ETA {{dProvider.time2}}</span>
+                </div>
+              </div>
+  
+              <div class="headSection" [hidden]="!pop.hasPicked">
+                <div class="moveHeader">
+                  <span style="
+                          font-size: 25px;
+                          font-weight: 800;
+                          margin-left: 10%;
+                        ">
+                    <strong>Enroute to destination</strong></span>
+                  <br />
+                  <span class="centerText">ETA {{dProvider.time2}}</span>
+                </div>
+              </div>
+  
+              <div class="resultContainer">
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="3">
+                      <div class="img-wrapper">
+                        <ion-icon name="contact" id="drivericonSize" (click)="OpenInfo()"></ion-icon>
+                      </div>
+                    </ion-col>
+                    <ion-col size="5">
+                      <div class="content-wrap">
+                        <span class="bookTitle">Rider</span>
+                        <br />
+                        <span style="font-size: 30px; font-weight: 800" class="bookPrice">{{name}}</span>
+                      </div>
+                    </ion-col>
+  
+                    <ion-col size="4">
+                      <div class="content-wrap">
+                        <span class="bookTitle">
+                          <img src="assets/icon/chat.svg" class="chatIcon" (click)="SendMessage()" /></span>
+                        <br />
+                      </div>
+  
+                      <div class="content-wrap">
+                        <span class="bookTitle">
+                          <ion-icon name="call" class="callIcon" (click)="call()"></ion-icon>
+                        </span>
+                        <br />
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+  
+              <div class="resultContainer2" *ngIf="hasNotPicked && pop.hasPicked == false">
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="2">
+                      <div class="img-wrapper">
+                        <img src="assets/icon/pin.png" class="dott" />
+                      </div>
+                    </ion-col>
+                    <ion-col size="10">
+                      <div class="content-wrap2">
+                        <span style="font-size: 16px; font-weight: 500" class="bookPrice">{{myGcode.locationName}}
+                        </span>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+  
+              <!-- <div class="resultContainer2" [hidden]="timeOver && !isArrived"> -->
+              <div class="resultContainer2" [hidden]="!pop.hasPicked">
+  
+                <ion-item> <ion-icon name="pin" style="color: #fbb91d"></ion-icon> &nbsp;{{destination}}</ion-item>
+  
+                <ion-item *ngIf="newDestinationStop"> <ion-icon name="pin"></ion-icon> {{newDestinationStop}}&nbsp;
+                  <ion-badge color="success">
+                    New Stop</ion-badge></ion-item>
+  
+  
+                <!-- <ion-grid>
+                    <ion-row>
+                      <ion-col size="2">
+                        <div class="img-wrapper">
+                          <img src="assets/icon/pin.png" class="dott" />
+                        </div>
+                      </ion-col>
+                      <ion-col size="10">
+                        <div class="content-wrap2">
+                          <span style="font-size: 16px; font-weight: 500" class="bookPrice">{{destination}}
+                          </span>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-item *ngIf="newDestinationStop"> <ion-icon name="pin"></ion-icon> {{newDestinationStop}}&nbsp; <ion-badge color="success">
+                      New Stop</ion-badge></ion-item>
+                  </ion-grid> -->
+              </div>
+  
+              <div [hidden]="!pop.hasPicked">
+  
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="6">
+  
+                      <div id="btn-center">
+                        <div *ngIf="isPaused == false">
+                          <ion-button class="button" size="large" color="danger" shape="round" (click)="ConfirmDrop()">
+                            <div>END TRIP</div>
+                          </ion-button>
+                        </div>
+                      </div>
+                    </ion-col>
+  
+                    <ion-col size="6">
+                      <div id="btn-center" *ngIf="isPaused == false">
+                        <div>
+                          <ion-button class="button" size="large" color="warning" shape="round" (click)="pauseRide()">
+                            <div>PAUSE TRIP</div>
+                          </ion-button>
+                        </div>
+                      </div>
+                    </ion-col>
+  
+                    <ion-col size="12">
+                      <div id="btn-center" *ngIf="isPaused == true">
+                        <div>
+                          <ion-button class="button" size="large" color="success" shape="round" (click)="resumeRide()">
+                            <div>RESUME TRIP</div>
+                          </ion-button>
+                        </div>
+                      </div>
+                    </ion-col>
+  
+  
+                  </ion-row>
+                </ion-grid>
+  
+              </div>
+  
+              <div [hidden]="isPiked == true">
+                <div id="btn-center">
+                  <div>
+                    <ion-button class="button" size="large" color="primary" shape="round" (click)="ConfirmPickup()">
+                      <div>START TRIP</div>
+                    </ion-button>
+                  </div>
+                </div>
+              </div>
+  
+              <div *ngIf="isArrived && !remove_arrived ">
+                <div id="btn-center">
+                  <div>
+                    <ion-button class="button" size="large" color="dark" shape="round" (click)="HasArrived()">
+                      <div>ARRIVED</div>
+                    </ion-button>
+                  </div>
+                </div>
+              </div>
+  
+  
+  
+              <div [hidden]="isArrived">
+                <div id="btn-center">
+                  <div>
+                    <ion-button class="button" size="large" color="success" shape="round" (click)="driveToPickup()">
+                      <div>Drive to Pickup</div>
+                    </ion-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </label>
+    <!-- END DRIVER MODE-->
+  
+  
+  </div>
+  
+  </ion-content>
+  
+  <ion-footer no-border id="lower_items" *ngIf="hasEnded">
+    <ion-button expand="block" ion-text-center color="primary" (click)="hoseMe()">
+      <ion-icon *ngIf="!hideMe" name="arrow-round-up" color="dark"></ion-icon>
+      <ion-icon *ngIf="hideMe" name="arrow-round-down" color="dark"></ion-icon>
+    </ion-button>
+    <div [hidden]="!isNotDestinyOption" *ngIf="hideMe" style="background-color: white;">
+      <h3 class="centerEarnings">Earnings</h3>
+      <div class="topped">
+        <ion-badge id="myBadge" color="primary" slot="end">{{settings.appcurrency}} {{mr}}
+        </ion-badge>
+      </div>
+    </div>
+  </ion-footer>

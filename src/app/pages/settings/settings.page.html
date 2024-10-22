@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-toolbar style="margin-top:20px">
+    <ion-button (click)="goBack()" color="primary" fill="clear">
+      <ion-icon style="font-size: 1.5em" name="arrow-back"></ion-icon> <span
+        style="margin-left:30px; font-size: 1.4em">{{lp.translate()[0].l6}}</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label class="ion-padding" color='deep'>
+      <ion-icon color='primary' name="ios-happy"></ion-icon>
+      {{lp.translate()[0].l7}}
+    </ion-label>
+    <ion-select (ionChange)="onSelectChange($event)">
+      <ion-select-option value="en" selected>English</ion-select-option>
+      <ion-select-option value="fr">French</ion-select-option>
+      <ion-select-option value="gm">German</ion-select-option>
+      <ion-select-option value="tk">Turkish</ion-select-option>
+      <ion-select-option value="rs">Russia</ion-select-option>
+      <ion-select-option value="pr">Portuguese</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
